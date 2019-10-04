@@ -13,3 +13,4 @@
 
 Route::get('/', 'PostsController@index')->name('posts.name');
 Route::get('/new', 'PostsController@create')->name('posts.create');
+Route::post('/','PostsController@store')->name('posts.store');

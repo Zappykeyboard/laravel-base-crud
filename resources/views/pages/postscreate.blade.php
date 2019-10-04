@@ -3,7 +3,7 @@
 @section('content')
   <a href="{{route('posts.name')}}">INDIETRO</a>
   <h1>Crea Nuovo Post</h1>
-    <form  action="" method="post">
+    <form  action="{{route('posts.store')}}" method="post">
       @csrf
       @method('POST')
       <div class="">
