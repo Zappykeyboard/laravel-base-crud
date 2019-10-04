@@ -13,7 +13,7 @@
     </head>
     <body>
       @include('elem.header')
-      <h1>I Post</h1>
+      
       @yield('content')
 
       @include('elem.footer')
