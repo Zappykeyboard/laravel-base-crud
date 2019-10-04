@@ -65,7 +65,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        return view('pages.postsedit', compact('post'));
     }
 
     /**
@@ -77,7 +79,16 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $validatedData = $request -> validate([
+        'title'=>'required',
+        'description'=>'required',
+        'author'=>'required'
+      ]);
+
+      $post = Post::findOrFail($id)->update($validatedData);
+
+      return redirect('/');
+
     }
 
     /**

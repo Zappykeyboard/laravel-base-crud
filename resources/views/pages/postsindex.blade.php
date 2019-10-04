@@ -9,6 +9,7 @@
       <h3>{{$value->author}}</h3>
       <p>{{$value->description}}</p>
     </div>
+    <p> <a href="{{route('posts.edit', $value->id)}}">Modifica Post...</a></p>
     <hr>
   @endforeach
 @endsection
