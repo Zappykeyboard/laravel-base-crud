@@ -10,6 +10,7 @@
       <p>{{$value->description}}</p>
     </div>
     <p> <a href="{{route('posts.edit', $value->id)}}">Modifica Post...</a></p>
+    <p> <a href="{{route('posts.destroy', $value->id)}}">!!ELIMINA POST!!</a></p>
     <hr>
   @endforeach
 @endsection

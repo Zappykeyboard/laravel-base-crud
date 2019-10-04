@@ -18,3 +18,5 @@ Route::post('/','PostsController@store')->name('posts.store');
 
 Route::get('/{id}/edit','PostsController@edit')->name('posts.edit');
 Route::post('/{id}', 'PostsController@update')->name('posts.update');
+
+Route::get('/{id}', 'PostsController@destroy')->name('posts.destroy');
